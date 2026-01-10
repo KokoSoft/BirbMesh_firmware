@@ -131,13 +131,13 @@ size_t RedirectablePrint::vprintf(const char *logLevel, const char *format, va_l
     }
     if (color && logLevel != nullptr) {
         if (strcmp(logLevel, MESHTASTIC_LOG_LEVEL_DEBUG) == 0)
-            Print::write("\u001b[34m", 5);
+            Print::write("\u001b[94m", 5);
         if (strcmp(logLevel, MESHTASTIC_LOG_LEVEL_INFO) == 0)
-            Print::write("\u001b[32m", 5);
+            Print::write("\u001b[92m", 5);
         if (strcmp(logLevel, MESHTASTIC_LOG_LEVEL_WARN) == 0)
-            Print::write("\u001b[33m", 5);
+            Print::write("\u001b[93m", 5);
         if (strcmp(logLevel, MESHTASTIC_LOG_LEVEL_ERROR) == 0)
-            Print::write("\u001b[31m", 5);
+            Print::write("\u001b[91m", 5);
     }
     len = Print::write(printBuf, len);
     if (color && logLevel != nullptr) {
@@ -159,15 +159,15 @@ void RedirectablePrint::log_to_serial(const char *logLevel, const char *format, 
     // include the header
     if (color) {
         if (strcmp(logLevel, MESHTASTIC_LOG_LEVEL_DEBUG) == 0)
-            Print::write("\u001b[34m", 5);
+            Print::write("\u001b[94m", 5);
         if (strcmp(logLevel, MESHTASTIC_LOG_LEVEL_INFO) == 0)
-            Print::write("\u001b[32m", 5);
+            Print::write("\u001b[92m", 5);
         if (strcmp(logLevel, MESHTASTIC_LOG_LEVEL_WARN) == 0)
-            Print::write("\u001b[33m", 5);
+            Print::write("\u001b[93m", 5);
         if (strcmp(logLevel, MESHTASTIC_LOG_LEVEL_ERROR) == 0)
-            Print::write("\u001b[31m", 5);
+            Print::write("\u001b[91m", 5);
         if (strcmp(logLevel, MESHTASTIC_LOG_LEVEL_TRACE) == 0)
-            Print::write("\u001b[35m", 5);
+            Print::write("\u001b[95m", 5);
     }
 
     uint32_t rtc_sec = getValidTime(RTCQuality::RTCQualityDevice, true); // display local time on logfile
