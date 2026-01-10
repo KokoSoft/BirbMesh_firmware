@@ -80,13 +80,13 @@ size_t RedirectablePrint::vprintf(const char *logLevel, const char *format, va_l
     }
     if (color && logLevel != nullptr) {
         if (strcmp(logLevel, MESHTASTIC_LOG_LEVEL_DEBUG) == 0)
-            Print::write("\u001b[34m", 5);
+            Print::write("\u001b[94m", 5);
         if (strcmp(logLevel, MESHTASTIC_LOG_LEVEL_INFO) == 0)
-            Print::write("\u001b[32m", 5);
+            Print::write("\u001b[92m", 5);
         if (strcmp(logLevel, MESHTASTIC_LOG_LEVEL_WARN) == 0)
-            Print::write("\u001b[33m", 5);
+            Print::write("\u001b[93m", 5);
         if (strcmp(logLevel, MESHTASTIC_LOG_LEVEL_ERROR) == 0)
-            Print::write("\u001b[31m", 5);
+            Print::write("\u001b[91m", 5);
     }
     len = Print::write(printBuf, len);
     if (color && logLevel != nullptr) {
