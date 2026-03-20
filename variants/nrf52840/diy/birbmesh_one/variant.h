@@ -39,7 +39,7 @@
 // Charger control
 #define PIN_CHARGER				_PINNUM(1, 6)
 #define CHARGER_STATE_ENABLED	LOW
-
+/*
 #if defined(USE_E22) || defined(USE_E22P)
 #undef USE_LLCC68
 #undef USE_SX1262
@@ -47,6 +47,7 @@
 #undef USE_LR1121
 #undef LR11X0_DIO_AS_RF_SWITCH
 #endif
+*/
 
 // BirbMesh board have TXEN connected to DIO2
 #define SX126X_DIO2_AS_RF_SWITCH

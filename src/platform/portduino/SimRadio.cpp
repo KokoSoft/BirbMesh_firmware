@@ -330,11 +330,12 @@ size_t SimRadio::getPacketLength(meshtastic_MeshPacket *mp)
 int16_t SimRadio::readData(uint8_t *data, size_t len)
 {
     int16_t state = RADIOLIB_ERR_NONE;
-
+	/* Out of bounds access! 
     if (state == RADIOLIB_ERR_NONE) {
         // add null terminator
         data[len] = 0;
     }
+	*/
 
     return state;
 }
