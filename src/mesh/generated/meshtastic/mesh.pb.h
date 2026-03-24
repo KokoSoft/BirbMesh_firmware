@@ -1217,7 +1217,7 @@ typedef struct _meshtastic_SignalRoutingInfo {
     /* Whether this node is actively participating in signal-based routing */
     bool signal_routing_active;
     /* List of directly heard neighbors with signal quality metrics.
- Limited to 14 neighbors for single-packet broadcasts. */
+ Limited to 11 neighbors per packet (fits 233 byte payload). */
     pb_size_t neighbors_count;
     meshtastic_SignalNeighbor neighbors[11];
     /* Topology snapshot version (monotonic timestamp).
